@@ -2,27 +2,28 @@
     ===== Código de TypeScript =====
 */
 interface Address {
-  calle: String;
-  pais: String;
-  ciudad: String;
+  street: String;
+  country: String;
+  city: String;
 }
 
 interface SuperHero {
   name: String;
   age: number;
   address: Address;
+  showAddress: () => string;
 }
 
 const superHeroe: SuperHero = {
   name: 'Spiderman',
   age: 30,
   address: {
-    calle: 'Main St',
-    pais: 'USA',
-    ciudad: 'NY',
+    street: 'Main St',
+    country: 'USA',
+    city: 'NY',
   },
   showAddress() {
-    return this.name + ', ' + this.address.ciudad + ', ' + this.address.pais;
+    return this.name + ', ' + this.address.city + ', ' + this.address.country;
   },
 };
 
